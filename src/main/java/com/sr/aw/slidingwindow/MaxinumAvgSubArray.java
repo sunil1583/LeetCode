@@ -19,8 +19,17 @@ package com.sr.aw.slidingwindow;
  * Input: nums = [5], k = 1
  * Output: 5.00000
  */
+
+/**
+ * Solution:
+ * Idea is to calcluate max sum using sliding window anf then calculate and return average
+ */
 public class MaxinumAvgSubArray {
-    public double findMaxAverage(int[] nums, int k) {
+    static void main() {
+        double maxAvg = findMaxAverage(new int[]{1,12, -5, -6, 50, 3}, 4);
+        System.out.println(maxAvg);
+    }
+    public static double findMaxAverage(int[] nums, int k) {
         int left = 0;
         int sum = 0;
         for(int right = 0; right < k; right++) {
